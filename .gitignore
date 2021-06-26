@@ -1,0 +1,15 @@
+#compile output
+/dist
+/tmp
+/out-tsc
+
+#dependencias
+/node_modules
+
+#IDE and editors
+/.idea
+.project
+
+# e2e
+/e2e/*.js
+/e2e/*.map
