@@ -1,5 +1,53 @@
-<app-header></app-header>
+<!--app-header></app-header>
 <app-nav></app-nav>
-<app-footer></app-footer>
+<app-footer></app-footer -->
 
+<form [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+
+    <app-form-field 
+        label="input" 
+        [required]="true" 
+        [control]="form.controls.input"
+        [isInline]="isInline">
+        <app-input formControlName="input"></app-input>
+    </app-form-field>
+    
+    <app-form-field 
+        label="input" 
+        [control]="form.controls.teste"
+        [isInline]="isInline">
+        <app-input formControlName="teste"></app-input>
+    </app-form-field>
+
+    <app-form-field 
+        label="Password" 
+        [required]="true"
+        [control]="form.controls.password">
+        <app-password formControlName="password"></app-password>
+    </app-form-field>
+
+    <app-form-field  
+        label="Select" 
+        [required]="true"
+        [control]="form.controls.select">
+        <app-select [items]="items" formControlName="select"></app-select>
+    </app-form-field>
+
+    <app-form-field  
+        label="Select" 
+        [required]="true"
+        [control]="form.controls.checkbox">
+        <app-checkboxes [items]="items" formControlName="checkbox"></app-checkboxes>
+    </app-form-field>
+
+    <app-form-field  
+        label="Select" 
+        [required]="true"
+        [control]="form.controls.radios">
+        <app-radios [items]="items" formControlName="radios"></app-radios>
+    </app-form-field>
+
+    <app-button (click)="onPatchValue()"> Patch value </app-button>
+    <app-button (click)="onToggleInline()"> Toggle Inline </app-button>
+</form>
 

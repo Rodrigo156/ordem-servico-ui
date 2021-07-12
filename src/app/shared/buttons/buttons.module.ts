@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {SistemaRoutingModule} from './sistema-routing.module';
+import {ButtonModule} from './button/button.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    SistemaRoutingModule
+    ButtonModule
+  ],
+  exports:[
+    ButtonModule
   ]
 })
-export class SistemaModule { }
+export class ButtonsModule { }
